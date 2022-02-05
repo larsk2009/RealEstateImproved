@@ -1,0 +1,19 @@
+{
+    "name": "Real Estate Improved",
+    "description": "Chrome extension to remove houses which have already been sold or retned from real estate websites",
+    "version": "0.1",
+    "manifest_version": 3,
+
+    "content_scripts": [
+        {
+            "matches": ["https://funda.nl/huur/*", "https://funda.nl/koop/*", "https://www.funda.nl/huur/*", "https://www.funda.nl/koop/*"],
+            "js": ["js/funda.js"],
+            "css": ["css/funda.css"]
+        },
+        {
+            "matches": ["https://www.huurklik.nl/huurwoningen/*", "https://huurklik.nl/huurwoningen/*"],
+            "js": ["js/huurklik.js"],
+            "css": ["css/huurklik.css"]
+        }
+    ]
+}
