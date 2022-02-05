@@ -24,14 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: action-zip
-        # You may pin to the exact commit or the version.
-        # uses: montudor/action-zip@0852c26906e00f8a315c704958823928d8018b28
-        uses: montudor/action-zip@v1.0.0
-        with:
-          # See montudor/action-zip README.md for more info
-          args: zip -qq -r extension.zip ./
           
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.3.1
@@ -39,4 +31,4 @@ jobs:
           # Artifact name
           name: extension zip
           # A file, directory or wildcard pattern that describes what to upload
-          path: extension.zip
+          path: ./
